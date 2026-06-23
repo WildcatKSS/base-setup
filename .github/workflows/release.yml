@@ -8,7 +8,7 @@ jobs:
     name: Release Readiness Placeholder
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Verify release documentation exists
         run: |
           test -f docs/deployment-strategy.md
