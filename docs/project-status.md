@@ -22,6 +22,7 @@ Prepare robust product-neutral template for later product selection.
 - Compliance/security templates
 - GitHub templates and workflow skeletons
 - Governance consolidation: single Definition of Done, single ADR template, hardened CI checks, product-neutral cleanup (ADR-001)
+- Security baseline and MVP Gate enforcement fix: real gate check, B2B SaaS security requirements and threat model baseline (ADR-002)
 
 ## Open Decisions
 

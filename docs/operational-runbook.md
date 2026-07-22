@@ -10,7 +10,7 @@
 
 ## Payment Issue
 
-1. Check Stripe dashboard
+1. Check the billing provider dashboard (Stripe in the default stack hypothesis)
 2. Check webhook logs
 3. Check application logs
 4. Retry or reconcile

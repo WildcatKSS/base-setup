@@ -4,12 +4,16 @@
 
 Do not add product-specific code before product selection and MVP Gate approval.
 
-## TypeScript
+## Language Standards
+
+The language is part of the Default Stack Hypothesis in `docs/architecture.md` and is only final after a tech-stack ADR. If TypeScript is confirmed:
 
 - strict mode
 - avoid `any`
 - validate external input
 - separate business logic from UI
+
+If another language is chosen, replace this section in the same ADR.
 
 ## Security
 
