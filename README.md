@@ -25,8 +25,8 @@ This template is intentionally not tied to a specific product. It is designed to
 
 ## How To Use
 
-1. Copy this template into a new GitHub repository.
-2. Update `.github/CODEOWNERS` with the new repository owner.
+1. Copy this template into a new GitHub repository. Marking the source repository as a GitHub "Template repository" is recommended: "Use this template" then gives every copy a fresh git history.
+2. Run `scripts/bootstrap.sh init --owner @your-github-name` in the copy. This resets the template's own repository memory (change log, template ADRs, decision registers, context files) to a clean starting state dated today. Use `--dry-run` first to preview.
 3. Open Claude Code in the repository and start with the command below.
 4. Do not allow product code until the MVP Gate is approved.
 5. Keep `docs/context/` updated after every session.

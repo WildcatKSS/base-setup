@@ -4,8 +4,6 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    open-pull-requests-limit: 5
+  # Add the package ecosystem (e.g. npm) after the tech-stack ADR is
+  # accepted and a manifest exists; a configured ecosystem without a
+  # manifest produces Dependabot config warnings.
