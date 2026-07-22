@@ -112,8 +112,8 @@ else
 
   # Product implementation requires MVP Gate approval.
   if echo "$changed" | grep -E '^(src/|prisma/)' >/dev/null; then
-    grep -Eiq 'Decision:[[:space:]]*Approved|MVP Gate Approved:[[:space:]]*Yes|Approved' docs/product/mvp-gate.md \
-      || fail "Product implementation changed, but MVP Gate is not marked Approved."
+    grep -Eq '^MVP Gate Approved:[[:space:]]*Yes[[:space:]]*$' docs/product/mvp-gate.md \
+      || fail "Product implementation changed, but MVP Gate is not marked 'MVP Gate Approved: Yes'."
 
     echo "$changed" | grep -E '^docs/scope-control.md$' >/dev/null \
       || fail "Product implementation changed; docs/scope-control.md must be updated or reviewed in the same PR."

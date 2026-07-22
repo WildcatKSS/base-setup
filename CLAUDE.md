@@ -66,17 +66,7 @@ If not: stop, document why, and choose higher-value work.
 
 ## Session Start Procedure
 
-At the start of every Claude Code session, read:
-
-1. docs/project-status.md
-2. docs/vision.md
-3. docs/context/current-state.md
-4. docs/context/decisions-summary.md
-5. docs/context/open-issues.md
-6. docs/context/next-session.md
-7. docs/risk-register.md
-8. docs/unit-economics.md
-9. docs/scope-control.md
+At the start of every Claude Code session, read the files listed in `docs/governance/repository-memory-policy.md` (the canonical session-start list).
 
 Then report:
 - current phase

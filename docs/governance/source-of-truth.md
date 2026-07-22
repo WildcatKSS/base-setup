@@ -21,6 +21,7 @@ When the same topic appears in multiple documents, use this map to know which do
 | Unit economics | `docs/unit-economics.md` | Business Model, MVP Gate |
 | Product requirements | `docs/prd.md` | Acceptance Criteria, Roadmap |
 | Architecture decisions | `docs/adrs/` | Architecture, Tech Decisions |
+| Decision format and criteria | `docs/governance/decision-framework.md` | `docs/adrs/ADR-template.md` |
 | Security requirements | `docs/security-requirements.md` | Security Checklist, Threat Model |
 | Founder override | `docs/governance/founder-override.md` | Change Management |
 

@@ -33,7 +33,13 @@ TBD_AFTER_PRODUCT_SELECTION
 
 ## Decision
 
-Approved / Rejected / Needs Revision
+The gate is only considered approved when the line below literally reads `MVP Gate Approved: Yes` — CI greps for exactly that. Fill in all three fields when deciding.
+
+MVP Gate Approved: No
+Approved By: TBD
+Approval Date: TBD
+
+Outcome options: Approved / Rejected / Needs Revision (record rejections and revisions in the fields above with `No` plus a note).
 
 ## Lean MVP Gate
 
