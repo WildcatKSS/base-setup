@@ -99,7 +99,10 @@ When conflicts occur, higher documents win:
 5. docs/security-requirements.md
 6. docs/acceptance-criteria.md
 7. docs/scope-control.md
-8. code
+8. docs/governance/lean-engineering.md
+9. code
+
+The canonical hierarchy lives in docs/governance/governance-charter.md. If this list and the charter ever disagree, the charter wins.
 
 If code conflicts with documentation:
 1. Stop
@@ -148,18 +151,9 @@ If one item fails, stop and report.
 
 ## Definition of Done
 
-Work is complete only when:
+Canonical source: `docs/governance/definition-of-done.md`.
 
-- Code compiles, if code exists
-- Tests pass, if code exists
-- Security checks pass
-- Error handling is present
-- Logging is present where relevant
-- Monitoring impact is known
-- Documentation is updated
-- Acceptance criteria are met
-- Rollback path is known for production changes
-- project-status.md and context files are updated
+Work is complete only when every relevant criterion in that document is met, including updating `docs/project-status.md` and the context files.
 
 ## MVP Gate
 

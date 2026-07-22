@@ -2,9 +2,15 @@
 
 | ADR | Decision | Status | Date |
 |---|---|---|---|
-| ADR-001 | Product selection | Proposed | TBD |
-| ADR-002 | Tech stack | Proposed | TBD |
-| ADR-003 | Authentication | Proposed | TBD |
-| ADR-004 | Billing | Proposed | TBD |
-| ADR-005 | Observability | Proposed | TBD |
-| ADR-006 | Deployment platform | Proposed | TBD |
+| ADR-001 | Governance simplification and template cleanup | Accepted | 2026-07-22 |
+
+## Pending Decisions
+
+The following decisions require an ADR before implementation. ADRs are created from `docs/adrs/ADR-template.md` when the decision is actually made, not in advance.
+
+- Product selection
+- Tech stack
+- Authentication
+- Billing
+- Observability
+- Deployment platform

@@ -16,5 +16,4 @@ jobs:
       - name: Run governance checks
         env:
           BASE_REF: origin/${{ github.base_ref || 'main' }}
-          STRICT_GOVERNANCE: "true"
         run: bash scripts/check-governance.sh

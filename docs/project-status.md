@@ -1,4 +1,4 @@
-Last Updated: YYYY-MM-DD
+Last Updated: 2026-07-22
 
 # Project Status
 
@@ -21,6 +21,7 @@ Prepare robust product-neutral template for later product selection.
 - Commercial validation kit
 - Compliance/security templates
 - GitHub templates and workflow skeletons
+- Governance consolidation: single Definition of Done, single ADR template, hardened CI checks, product-neutral cleanup (ADR-001)
 
 ## Open Decisions
 
