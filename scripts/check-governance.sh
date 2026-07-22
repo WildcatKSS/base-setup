@@ -2,7 +2,6 @@
 set -euo pipefail
 
 BASE_REF="${BASE_REF:-origin/main}"
-STRICT="${STRICT_GOVERNANCE:-true}"
 
 fail() {
   echo "❌ $1"
@@ -62,6 +61,21 @@ if find . \( -name ".env" -o -name ".env.local" -o -name ".env.production" \) -n
 fi
 pass "No committed environment files detected."
 
+# ADR template quality fields.
+if [[ -f "docs/adrs/ADR-template.md" ]]; then
+  grep -q "Decision Confidence" docs/adrs/ADR-template.md || fail "ADR template missing Decision Confidence."
+  grep -q "Evidence Source" docs/adrs/ADR-template.md || fail "ADR template missing Evidence Source."
+  grep -q "ADR Quality Checklist" docs/adrs/ADR-template.md || fail "ADR template missing Quality Checklist."
+fi
+pass "ADR template contains required quality fields."
+
+# Freshness metadata must contain a real date, not a placeholder.
+for file in docs/project-status.md docs/context/current-state.md docs/context/next-session.md; do
+  grep -Eq "Last Updated: [0-9]{4}-[0-9]{2}-[0-9]{2}" "$file" \
+    || fail "$file missing a valid 'Last Updated: YYYY-MM-DD' date."
+done
+pass "Freshness metadata contains valid dates."
+
 # Determine changed files if possible.
 changed=""
 if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
@@ -71,6 +85,18 @@ if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
     changed="$(git diff --name-only HEAD~1...HEAD 2>/dev/null || true)"
   fi
 fi
+
+# Automated dependency updates cannot author ADRs or context updates.
+if [[ "${GITHUB_ACTOR:-}" == dependabot* || "${GITHUB_ACTOR:-}" == renovate* \
+   || "${GITHUB_HEAD_REF:-}" == dependabot/* || "${GITHUB_HEAD_REF:-}" == renovate/* ]]; then
+  warn "Dependency-bot change detected; skipping diff-based governance checks."
+  changed=""
+fi
+
+# Keywords are matched as whole path segments/words (bounded by / . _ -)
+# so that e.g. "email.md" does not trigger the "ai" rule.
+usage_keywords='(^|[/._-])(openai|anthropic|ai|llm|stripe|billing|subscriptions?|usage|quotas?|rate-?limits?|tokens?|webhooks?)([/._-]|$)'
+security_keywords='(^|[/._-])(auth|authn|authz|authentication|authorization|middleware|security|permissions?|roles?|access)([/._-]|$)'
 
 if [[ -z "$changed" ]]; then
   warn "No git diff available; running baseline governance checks only."
@@ -102,8 +128,14 @@ else
       || fail "Architecture/security/dependency/deployment-impacting change detected; update or add an ADR."
   fi
 
+  # Security-sensitive code changes require ADR updates.
+  if echo "$changed" | grep -Ei "$security_keywords" >/dev/null; then
+    echo "$changed" | grep -E '^docs/adrs/ADR-.*\.md$' >/dev/null \
+      || fail "Security-sensitive change detected; update or add an ADR."
+  fi
+
   # AI/API/billing/usage-heavy changes require unit economics review.
-  if echo "$changed" | grep -Ei '(openai|anthropic|ai|llm|stripe|billing|subscription|usage|quota|rate.?limit|token|webhook)' >/dev/null; then
+  if echo "$changed" | grep -Ei "$usage_keywords" >/dev/null; then
     echo "$changed" | grep -E '^docs/unit-economics.md$' >/dev/null \
       || fail "AI/API/billing/usage-related change detected; docs/unit-economics.md must be updated or reviewed."
   fi
@@ -116,24 +148,3 @@ else
 fi
 
 pass "Governance enforcement completed."
-
-
-# Security-sensitive changes require ADR updates.
-if [[ -n "${changed:-}" ]]; then
-  if echo "$changed" | grep -Ei '(auth|authentication|authorization|middleware|security|permission|role|access)' >/dev/null; then
-    echo "$changed" | grep -E '^docs/adrs/ADR-.*\.md$' >/dev/null       || fail "Security-sensitive change detected; update or add an ADR."
-  fi
-fi
-
-
-# ADR template quality fields
-if [[ -f "docs/adrs/ADR-template.md" ]]; then
-  grep -q "Decision Confidence" docs/adrs/ADR-template.md || fail "ADR template missing Decision Confidence."
-  grep -q "Evidence Source" docs/adrs/ADR-template.md || fail "ADR template missing Evidence Source."
-  grep -q "ADR Quality Checklist" docs/adrs/ADR-template.md || fail "ADR template missing Quality Checklist."
-fi
-
-# Freshness metadata presence
-for file in docs/project-status.md docs/context/current-state.md docs/context/next-session.md; do
-  grep -q "Last Updated:" "$file" || fail "$file missing Last Updated field."
-done

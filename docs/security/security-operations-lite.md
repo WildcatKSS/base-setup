@@ -12,7 +12,7 @@ This is intentionally lightweight.
 - Never commit `.env` files.
 - Rotate secrets after suspected exposure.
 - Rotate production secrets when changing vendors or maintainers.
-- Keep `.env.example` current without real values.
+- Once a stack is selected, provide a `.env.example` with placeholder values only; keep it current and never include real values.
 
 ## Dependency Hygiene
 

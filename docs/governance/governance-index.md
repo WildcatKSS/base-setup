@@ -28,7 +28,7 @@ Use this file to quickly locate the correct governance document.
 
 - `docs/architecture.md`
 - `docs/security-requirements.md`
-- `docs/templates/adr-template.md`
+- `docs/adrs/ADR-template.md`
 - `docs/governance/decision-framework.md`
 
 ## Before Completing Work

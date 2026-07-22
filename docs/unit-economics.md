@@ -44,6 +44,12 @@ Review after:
 - AI/API usage change
 - Launch
 
+## Review Log
+
+| Date | Trigger | Outcome |
+|---|---|---|
+| 2026-07-22 | Governance cleanup (ADR-001) removed the empty billing ADR stub | Reviewed; no unit economics impact |
+
 ## Cost Governance
 
 Before implementing usage-heavy features, especially AI/API workflows:
