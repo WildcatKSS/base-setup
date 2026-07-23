@@ -8,7 +8,7 @@ When documentation and code disagree, stop and resolve the conflict before conti
 
 ## Purpose
 
-This repository is a product-neutral Claude Code operating system for designing, validating, building, launching, and operating a production-ready B2B SaaS product.
+This repository is a product-neutral Claude Code operating system for designing, validating, building, launching, and operating a production-ready SaaS or digital service (B2B or B2C).
 
 The specific product goal will be added later. Until then, this repository must remain product-neutral and governance-first.
 

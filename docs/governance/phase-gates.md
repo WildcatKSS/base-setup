@@ -18,7 +18,7 @@ Required:
 ## Phase 1 – Market Discovery
 
 Required:
-- At least 10 B2B SaaS opportunities considered.
+- At least 10 SaaS or digital-service opportunities (B2B or B2C) considered.
 - Opportunities scored.
 - Assumptions marked clearly.
 - No product code written.

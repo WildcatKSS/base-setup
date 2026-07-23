@@ -7,6 +7,7 @@
 - `scripts/bootstrap.sh init`: resets template repository memory in a fresh copy (change log, template ADRs, decision registers, context files), with `--dry-run` and `--owner` options
 
 ## Changed
+- Broadened template scope from B2B SaaS to SaaS or digital service (B2B or B2C); reworded CLAUDE.md, README, vision non-negotiables, Phase 1 prompt, phase gates, security baseline and threat model accordingly (ADR-003)
 - Consolidated Definition of Done and ADR template to single canonical versions (ADR-001)
 - Aligned CLAUDE.md governance hierarchy with the governance charter
 - Rewrote README to a single start procedure

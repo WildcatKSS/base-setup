@@ -2,7 +2,9 @@
 
 ## Purpose
 
-Canonical security source document. These are the minimum requirements for any B2B SaaS built from this template, independent of the product selected. Product-specific requirements are added after product selection.
+Canonical security source document. These are the minimum requirements for any SaaS or digital service (B2B or B2C) built from this template, independent of the product selected. Product-specific requirements are added after product selection.
+
+Throughout this document, "tenant" means the paying customer's account: an organization in B2B, an individual user account in B2C. The isolation requirements apply equally to both.
 
 ## Authentication
 
