@@ -8,6 +8,9 @@
 
 ## Changed
 - Broadened template scope from B2B SaaS to SaaS or digital service (B2B or B2C); reworded CLAUDE.md, README, vision non-negotiables, Phase 1 prompt, phase gates, security baseline and threat model accordingly (ADR-003)
+- Governance check now matches product code in common layouts (src, app, lib, server, api, pages, components, prisma, migrations) instead of only src/ and prisma/, so implementation cannot bypass the MVP Gate; list to be narrowed in the tech-stack ADR
+- Validation plan carries separate B2B and B2C minimum-evidence thresholds; interview script gains B2C variants of the budget/decision-maker questions; MVP Gate defines the B2C reading of "first 10 customers"
+- Added docs/sales/b2c-acquisition-channels.md; outbound email/LinkedIn templates marked as B2B channels
 - Consolidated Definition of Done and ADR template to single canonical versions (ADR-001)
 - Aligned CLAUDE.md governance hierarchy with the governance charter
 - Rewrote README to a single start procedure
@@ -21,6 +24,7 @@
 - npm ecosystem entry in dependabot.yml; it produced config warnings without a manifest and returns with the tech-stack ADR
 
 ## Fixed
+- Documentation style guide showed identical Good/Avoid path examples; bootstrap changelog reset was missing the Removed section
 - MVP Gate CI check was vacuous: it matched the word "Approved" in the unapproved template's option line; it now requires a literal `MVP Gate Approved: Yes` (ADR-002)
 
 ## Security

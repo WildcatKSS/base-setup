@@ -20,6 +20,10 @@ The governance workflow enforces:
 - architecture, security, dependency and deployment changes require ADR updates
 - AI, API, billing and usage-related changes require Unit Economics review
 
+## Product Code Paths
+
+The check treats a broad default list of directories as product code (src, app, lib, server, api, pages, components, prisma, migrations) so implementation cannot bypass the MVP Gate by living outside `src/`. Narrow this list to the real layout in the tech-stack ADR.
+
 ## Intentional Limits
 
 CI does not attempt to judge business quality.

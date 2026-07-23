@@ -1,5 +1,7 @@
 # LinkedIn Outreach
 
+Channel note: LinkedIn outreach is primarily a B2B channel. For consumer products, see `docs/sales/b2c-acquisition-channels.md`.
+
 ## Connection Request
 
 Hi [Name], I'm researching how [role/company type] handles [problem]. Would be great to connect.

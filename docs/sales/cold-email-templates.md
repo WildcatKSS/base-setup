@@ -1,5 +1,7 @@
 # Cold Email Templates
 
+Channel note: cold outbound email is primarily a B2B channel. For consumer products, see `docs/sales/b2c-acquisition-channels.md`.
+
 ## Problem Observation
 
 Subject: Quick question about [problem]

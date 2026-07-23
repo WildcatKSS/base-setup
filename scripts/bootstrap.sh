@@ -73,6 +73,8 @@ write docs/change-log.md <<EOF
 
 ## Changed
 
+## Removed
+
 ## Fixed
 
 ## Security

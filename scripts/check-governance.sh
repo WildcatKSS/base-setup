@@ -98,6 +98,11 @@ fi
 usage_keywords='(^|[/._-])(openai|anthropic|ai|llm|stripe|billing|subscriptions?|usage|quotas?|rate-?limits?|tokens?|webhooks?)([/._-]|$)'
 security_keywords='(^|[/._-])(auth|authn|authz|authentication|authorization|middleware|security|permissions?|roles?|access)([/._-]|$)'
 
+# Product code can live in different layouts depending on the stack, which is
+# not selected yet. Keep this list broad so implementation cannot bypass the
+# MVP Gate by living outside src/; narrow it in the tech-stack ADR.
+product_code_paths='^(src|app|lib|server|api|pages|components|prisma|migrations)/'
+
 if [[ -z "$changed" ]]; then
   warn "No git diff available; running baseline governance checks only."
 else
@@ -105,13 +110,13 @@ else
   echo "$changed"
 
   # Context memory must be updated in meaningful PRs.
-  if echo "$changed" | grep -E '^(src/|prisma/|docs/|\.github/workflows/|package.json|pnpm-lock.yaml|package-lock.json|yarn.lock|docker-compose.yml)' >/dev/null; then
+  if echo "$changed" | grep -E "$product_code_paths|^(docs/|\.github/workflows/|package.json|pnpm-lock.yaml|package-lock.json|yarn.lock|docker-compose.yml)" >/dev/null; then
     echo "$changed" | grep -E '^(docs/project-status.md|docs/context/current-state.md|docs/context/next-session.md)' >/dev/null \
       || fail "Meaningful changes require updates to project-status.md, current-state.md or next-session.md."
   fi
 
   # Product implementation requires MVP Gate approval.
-  if echo "$changed" | grep -E '^(src/|prisma/)' >/dev/null; then
+  if echo "$changed" | grep -E "$product_code_paths" >/dev/null; then
     grep -Eq '^MVP Gate Approved:[[:space:]]*Yes[[:space:]]*$' docs/product/mvp-gate.md \
       || fail "Product implementation changed, but MVP Gate is not marked 'MVP Gate Approved: Yes'."
 

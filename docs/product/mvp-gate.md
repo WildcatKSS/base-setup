@@ -18,6 +18,8 @@ TBD_AFTER_PRODUCT_SELECTION
 
 ## First 10 Customers Plan
 
+For B2C, read "first 10 customers" as the first paying cohort giving an equivalent revenue signal: at consumer price points (€5–10/month) that is typically 50–200 paying users, not 10. The plan must name the channel that reaches them at acceptable cost (see `docs/sales/b2c-acquisition-channels.md`).
+
 ## Security and Compliance Review
 
 ## Checklist
