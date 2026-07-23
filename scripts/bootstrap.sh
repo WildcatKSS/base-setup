@@ -173,7 +173,7 @@ Last Updated: $today
 
 ## Summary
 
-Repository is a freshly initialized product-neutral SaaS starter template. No product has been selected.
+Repository is a freshly initialized product-neutral starter template for a SaaS or digital service (B2B or B2C). No product has been selected.
 
 ## Active Phase
 
