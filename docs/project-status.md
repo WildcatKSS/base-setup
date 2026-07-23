@@ -1,4 +1,4 @@
-Last Updated: 2026-07-22
+Last Updated: 2026-07-23
 
 # Project Status
 
@@ -23,11 +23,12 @@ Prepare robust product-neutral template for later product selection.
 - GitHub templates and workflow skeletons
 - Governance consolidation: single Definition of Done, single ADR template, hardened CI checks, product-neutral cleanup (ADR-001)
 - Security baseline and MVP Gate enforcement fix: real gate check, B2B SaaS security requirements and threat model baseline (ADR-002)
+- Scope broadened to SaaS or digital service (B2B or B2C); customer type is now an open product-selection decision (ADR-003)
 
 ## Open Decisions
 
 - Product category
-- Target customer
+- Customer type (B2B or B2C) and target customer
 - Pricing
 - Final tech stack
 - Deployment platform

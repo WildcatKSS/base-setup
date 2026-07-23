@@ -2,8 +2,8 @@
 
 You are still product-neutral.
 
-Analyze 10 B2B SaaS opportunities that meet:
-- Real business pain
+Analyze 10 SaaS or digital-service opportunities (B2B, B2C, or a mix) that meet:
+- Real customer pain (business or consumer)
 - Paying customer
 - Buildable by one developer
 - MVP possible in 60 days

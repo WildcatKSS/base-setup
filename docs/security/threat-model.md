@@ -1,6 +1,6 @@
 # Threat Model
 
-This is a baseline threat model for a generic multi-tenant B2B SaaS. It applies regardless of the product selected. Extend it with product-specific assets, entry points and threats after product selection; product-specific rows are marked `TBD_AFTER_PRODUCT_SELECTION`.
+This is a baseline threat model for a generic multi-tenant SaaS or digital service (B2B or B2C). A "tenant" is the paying customer's account: an organization in B2B, an individual user account in B2C. It applies regardless of the product selected. Extend it with product-specific assets, entry points and threats after product selection; product-specific rows are marked `TBD_AFTER_PRODUCT_SELECTION`.
 
 ## Assets
 

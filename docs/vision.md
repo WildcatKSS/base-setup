@@ -27,7 +27,7 @@ TBD_AFTER_PRODUCT_SELECTION
 
 ## Non-Negotiables
 
-- Must be B2B SaaS unless explicitly changed by ADR
+- Must be a SaaS or digital service (B2B or B2C) unless explicitly changed by ADR
 - Must be buildable by one developer
 - Must be maintainable without a large team
 - Must have realistic path to €1.000 MRR within 12 months

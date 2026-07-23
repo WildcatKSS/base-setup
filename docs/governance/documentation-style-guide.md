@@ -42,5 +42,6 @@ Good:
 - `docs/context/current-state.md`
 
 Avoid:
-- `docs/context/current-state.md`
+- `current-state.md`
+- `../context/current-state.md`
 

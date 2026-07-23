@@ -73,6 +73,8 @@ write docs/change-log.md <<EOF
 
 ## Changed
 
+## Removed
+
 ## Fixed
 
 ## Security
@@ -173,7 +175,7 @@ Last Updated: $today
 
 ## Summary
 
-Repository is a freshly initialized product-neutral SaaS starter template. No product has been selected.
+Repository is a freshly initialized product-neutral starter template for a SaaS or digital service (B2B or B2C). No product has been selected.
 
 ## Active Phase
 
@@ -201,7 +203,7 @@ Read CLAUDE.md and docs/prompts/phase-1-market-discovery.md. Start Phase 1. Do n
 
 ## Expected Output
 
-- 10 B2B SaaS opportunities
+- 10 SaaS or digital-service opportunities (B2B or B2C)
 - Scored shortlist
 - Top 3 candidates
 - Recommendation only if score threshold is met

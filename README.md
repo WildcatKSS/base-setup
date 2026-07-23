@@ -1,8 +1,8 @@
 # Claude Code Production SaaS Starter
 
-A product-neutral, governance-first starter repository for building a production-ready B2B SaaS with Claude Code.
+A product-neutral, governance-first starter repository for building a production-ready SaaS or digital service (B2B or B2C) with Claude Code.
 
-This template is intentionally not tied to a specific product. It is designed to become the operating system for a SaaS project once a product direction is selected and validated.
+This template is intentionally not tied to a specific product or customer type. It is designed to become the operating system for a SaaS or digital-service project once a product direction is selected and validated.
 
 ## What This Includes
 
